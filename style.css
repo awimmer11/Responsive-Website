@@ -1,0 +1,434 @@
+body {
+  margin: 0 auto;
+  font-size: 1.1em;
+  font-family: monospace;
+  padding-bottom: 30px;
+}
+
+.top-bar {
+  display: grid;
+  grid-template-columns: 550px 550px;
+  gap: 20px;
+  padding: 0 40px;
+  grid-template-areas: "leftnav rightnav";
+  justify-content: center;
+}
+
+.logo {
+  width: 50px;
+}
+
+.logo-name {
+  color: gray;
+  text-align: left;
+}
+
+.leftnav {
+  display: flex;
+  column-gap: 0.5em;
+  justify-content: start;
+  align-items: center;
+  grid-area: leftnav;
+}
+
+.rightnav {
+  display: flex;
+  column-gap: 1.5em;
+  grid-area: rightnav;
+  justify-content: end;
+  margin-right: 2em;
+}
+
+.trigram {
+  display: none;
+  grid-area: replace-nav;
+}
+
+.aboutus {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 40px;
+}
+
+.about-us-title{
+  font-size: 4em;
+  margin-bottom: -5px;
+}
+
+.about-us-paragraph {
+  font-size: 1.1em;
+  margin-bottom: 70px;
+  max-width: 1000px;
+}
+
+.image-gallery{
+  display: grid;
+  padding: 0 25px;
+  grid-template-columns: repeat(3, 350px);
+  grid-template-rows: auto 3em auto;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 5em;
+}
+
+.home {
+  width: 350px;
+}
+
+.pic-paragraph {
+  width: 350px;
+}
+
+p {
+  margin: 0;
+}
+
+.our-team {
+  display: flex;
+  font-size: 2em;
+  justify-content: center;
+  margin-bottom: -30px;
+}
+
+.lines {
+  width: 1em;
+  background-color: black;
+  height: 1px;
+  margin: 10px;
+  place-self: center;
+}
+
+.our-team-text {
+  display: grid;
+  grid-template-columns: 650px;
+  justify-content: center;
+  text-align: center;
+}
+
+.staff {
+  justify-content: center;
+  display: grid;
+  grid-template-columns: 35px 128px 128px 128px 128px 35px;
+  column-gap: 2.5em;
+  grid-template-rows: repeat(9, 1fr);
+  grid-template-areas: 
+  ". user1 user2 user3 user4 ."
+  ". user1 user2 user3 user4 ."
+  ". user1 user2 user3 user4 ."
+  ". user1 user2 user3 user4 ."
+  "left-arrow user1 user2 user3 user4 right-arrow"
+  ". user1 user2 user3 user4 ."
+  ". name1 name2 name3 name4 ."
+  ". title1 title2 title3 title4 ."
+  ". socials1 socials2 socials3 socials4 .";
+  margin-bottom: 75px;
+}
+
+.rs {
+  margin-top: 50px;
+  width: 128px;
+  height: 128px;
+}
+
+.b {
+  font-weight: bold;
+}
+
+.m {
+  margin-top: -14px;
+}
+
+.user-pic1 {grid-area: user1;}
+.user-pic2 {grid-area: user2;}
+.user-pic3 {grid-area: user3;}
+.user-pic4 {grid-area: user4;}
+.user-name1 {grid-area: name1;}
+.user-name2 {grid-area: name2;}
+.user-name3 {grid-area: name3;}
+.user-name4 {grid-area: name4;}
+.title1 {grid-area: title1;}
+.title2 {grid-area: title2;}
+.title3 {grid-area: title3;}
+.title4 {grid-area: title4;}
+.socialmini {width: 20px;}
+.social-container1 {grid-area: socials1;}
+.social-container2 {grid-area: socials2;}
+.social-container3 {grid-area: socials3;}
+.social-container4 {grid-area: socials4;}
+
+.left-arrow {
+  grid-area: left-arrow;
+  font-size: 2em;
+  justify-self: end;
+}
+
+.right-arrow {
+  grid-area: right-arrow;
+  font-size: 2em;
+}
+
+.social-row {
+  display: grid;
+  grid-template-columns: repeat(4, 120px);
+  justify-content: center;
+  margin-bottom: 100px;
+}
+
+.fb-b, .twitter-b, .instagram-b, .linkedin-b {
+  width: 25px;
+  fill: #777676;
+}
+
+.fb-t, .twitter-t, .instagram-t, .linkedin-t {
+  text-align: left;
+  color: #777676;
+}
+
+.icon {
+  display: flex;
+  column-gap: 5px;
+  place-items: center;
+  justify-content: center;
+}
+
+footer {
+  background: black;
+  padding-top: 20px;
+}
+
+.footer-info {
+  display: flex;
+  column-gap: 100px;
+  align-items: center;
+  justify-content: center;
+  color: #777676;
+  margin-bottom: 70px;
+}
+
+.white-header {
+  color: white;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.address, .email, .num {
+  width: 200px;
+  text-align: center;
+}
+
+.hr-style {
+  border: 1px solid #777676;
+  margin: 0px 30px;
+  margin-bottom: 20px;
+}
+
+.copyright {
+  color: #777676;
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+h5 {
+  margin: 3px;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+  .top-bar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 40px;
+    grid-template-areas: "leftnav rightnav";
+    justify-content: center;
+  }
+
+  .image-gallery{
+   display: grid;
+   gap: 20px;
+   grid-template-columns: 1fr 3fr;
+   grid-template-areas: 
+   "gridimg1 t1"
+   "gridimg1 p1"
+   "gridimg1 p1"
+   "gridimg2 t2"
+   "gridimg2 p2"
+   "gridimg2 p2"
+   "gridimg3 t3"
+   "gridimg3 p3"
+   "gridimg3 p3";
+  }
+
+  .gridimg1 {grid-area: gridimg1;}
+  .gridimg2 {grid-area: gridimg2;}
+  .gridimg3 {grid-area: gridimg3;}
+  .t1 {grid-area: t1;}
+  .t2 {grid-area: t2;}
+  .t3 {grid-area: t3;}
+  .p1 {grid-area: p1;}
+  .p2 {grid-area: p2;}
+  .p1 {grid-area: p3;}
+
+  .home {
+    width: 190px;
+    justify-self: center;
+  }
+
+  .pic-paragraph {
+    width: 478px;
+    margin-top: -20px;
+  }
+
+  .t1, .t2, .t3 {
+    margin: 0;
+  }
+
+  .t1 {
+    margin-bottom: 16.5px;
+  }
+
+  .staff {
+    justify-content: center;
+    display: grid;
+    row-gap: 0px;
+    column-gap: 25px;
+    grid-template-columns: 100px 239px 239px 100px;
+    grid-template-rows: 300px 30px 7px 20px 0px 300px 30px 7px;
+    grid-template-areas: 
+    ". user1 user2 ."
+    ". name1 name2 ."
+    ". title1 title2 ."
+    ". socials1 socials2 ."
+    "left-arrow . . right-arrow"
+    ". user3 user4 ."
+    ". name3 name4 ."
+    ". title3 title4 ."
+    ". socials3 socials4 .";
+  }
+
+  img {
+    width: 239px;
+  }
+
+  .user-pic1,
+  .user-pic2,
+  .user-pic3,
+  .user-pic4 {
+    margin-right: 110px;
+  }
+
+  .staff div {
+    justify-self: center;
+  }
+
+  .footer-info {
+    margin: 0px 20px 70px 20px;
+  }
+}
+
+@media (min-width: 360px) and (max-width: 767px) {
+  .top-bar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    grid-template-areas: "leftnav replace-nav";
+    justify-content: center;
+  }
+
+  .trigram {
+    display: block;
+    justify-self: end;
+    align-self: center;
+  }
+
+  .rightnav {
+    display: none;
+  }
+
+  .image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+   }
+
+   .gridimg1 {order: 1;}
+   .gridimg2 {order: 4;}
+   .gridimg3 {order: 7;}
+   .t1 {order: 2;}
+   .t2 {order: 5;}
+   .t3 {order: 8;}
+   .p1 {order: 3;}
+   .p2 {order: 6;}
+   .p3 {order: 9;}
+
+  .our-team-text {
+    display: grid;
+    grid-template-columns: 350px;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .staff {
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 360px;
+    grid-template-rows: 420px 30px 5px 0px 420px 30px 5px 0px 420px 30px 5px 0px 420px 30px 5px 0px;
+    row-gap: 0px;
+    column-gap: 2.5em;
+    grid-template-areas: 
+    "user1"
+    "name1"
+    "title1"
+    "socials1"
+    "user2"
+    "name2"
+    "title2"
+    "socials2"
+    "user3"
+    "name3"
+    "title3"
+    "socials3"
+    "user4"
+    "name4"
+    "title4"
+    "socials4";
+  }
+  
+  .staff p, .social-container1, .social-container2, .social-container3, .social-container4 {
+    text-align: center;
+  }
+
+  .left-arrow, .right-arrow{
+    display: none;
+    
+  }
+  img {
+    width: 360px;
+  }
+
+  .social-row {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+
+  .footer-info {
+    display: flex;
+    flex-direction: column;
+    column-gap: 100px;
+    align-items: center;
+    justify-content: center;
+    color: #777676;
+    margin-bottom: 70px;
+  }
+
+  .address, .email, .num {
+    width: 200px;
+    margin-bottom: 25px;
+    text-align: center;
+  }
+}
+
+
